@@ -1,0 +1,9 @@
+<div class = "row">
+    <div class = "col - 4">
+            <button  *ngFor = "let regiones of regionesBoton"
+            (click) ="activarRegion(regiones)"
+            [class] = "getClass(regiones)">
+            {{regiones}}
+            </button>
+    </div>
+</div>

@@ -1,2 +1,14 @@
 <h2>Por región</h2>
 <hr>
+<div class = "row">
+    <div class = "col">
+        <app-region-input (onEnter) = "activarRegion($event)"></app-region-input>
+    <div>
+</div>
+
+
+<div class = "row" *ngIf = "regionesArray.length > 0">
+    <div class = "col">
+        <app-region-tabla [regionesArray] = "regionesArray"></app-region-tabla>
+    <div>
+</div>

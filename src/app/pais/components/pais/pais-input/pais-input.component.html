@@ -1,0 +1,12 @@
+<!-- buscar() es el metodo que hicimos en nuestro pais-input.component.ts el cual tiene 
+     como parametro nuestro evento onEnter() con la propiedad emit que emite los datos 
+     de un metodo a otro metodo en otro componente. -->
+<form autocomplete="off" (ngSubmit) = "buscar()" >
+    <input type = "text" name = "termino" 
+    placeholder="Buscar país..." class="form-control" 
+    [(ngModel)] = "termino"
+    (input) = "teclaPresionada()"/>
+</form>
+<!-- con [(ngModel)] enviamos el valor 'termino' del input al metodo buscar()  -->
+<!-- (input) es el evento directo del input el cual se ejecuta al teclear 
+    en este caso con el debouncer -->

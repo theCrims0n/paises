@@ -43,6 +43,8 @@ export interface Country {
     startOfWeek:  string;
     capitalInfo:  CapitalInfo;
     postalCode:   PostalCode;
+    alpha3Code:   alpha3Code;
+
 }
 
 export interface CapitalInfo {
@@ -112,6 +114,11 @@ export interface Translation {
 }
 
 export interface PostalCode {
+    format: string;
+    regex:  string;
+}
+
+export interface alpha3Code {
     format: string;
     regex:  string;
 }
@@ -260,6 +267,7 @@ function r(name: string) {
     return { ref: name };
 }
 
+
 const typeMap: any = {
     "Welcome": o([
         { json: "name", js: "name", typ: r("Name") },
@@ -296,7 +304,8 @@ const typeMap: any = {
         { json: "coatOfArms", js: "coatOfArms", typ: r("CoatOfArms") },
         { json: "startOfWeek", js: "startOfWeek", typ: "" },
         { json: "capitalInfo", js: "capitalInfo", typ: r("CapitalInfo") },
-        { json: "postalCode", js: "postalCode", typ: r("PostalCode") },
+        { json: "postalCode", js: "postalCode", typ: a("PostalCode") },
+
     ], false),
     "CapitalInfo": o([
         { json: "latlng", js: "latlng", typ: a(3.14) },
@@ -342,6 +351,7 @@ const typeMap: any = {
         { json: "common", js: "common", typ: "" },
         { json: "official", js: "official", typ: "" },
         { json: "nativeName", js: "nativeName", typ: r("NativeName") },
+        
     ], false),
     "NativeName": o([
         { json: "spa", js: "spa", typ: r("Translation") },

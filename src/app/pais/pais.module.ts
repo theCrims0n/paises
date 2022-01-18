@@ -7,6 +7,13 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { PaisTablaComponent } from './components/pais/pais-tabla/pais-tabla.component';
+import { PaisInputComponent } from './components/pais/pais-input/pais-input.component';
+import { CapitalInputComponent } from './components/capital/capital-input/capital-input.component';
+import { CapitalTablaComponent } from './components/capital/capital-tabla/capital-tabla.component';
+import { RegionInputComponent } from './components/region/region-input/region-input.component';
+import { RegionTablaComponent } from './components/region/region-tabla/region-tabla.component';
+
 
 
 
@@ -15,13 +22,21 @@ import { RouterModule } from '@angular/router';
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    PaisTablaComponent,
+    PaisInputComponent,
+    CapitalInputComponent,
+    CapitalTablaComponent,
+    RegionInputComponent,
+    RegionTablaComponent
   ],
   exports:[
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    PaisTablaComponent,
+    CapitalTablaComponent
   ],
   imports: [
     CommonModule,

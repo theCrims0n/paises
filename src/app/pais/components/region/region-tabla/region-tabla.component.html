@@ -1,0 +1,28 @@
+<table class ="table table-hover">
+    <thead>
+        <tr>
+            <th> # </th>
+            <th> Bandera </th>
+            <th> Región </th>
+            <th> Nombre </th>
+            <th> Población </th>
+            <th></th>
+        </tr>
+        
+    </thead>
+<tbody>
+    <tr *ngFor = "let region of regionesArray let i = index;">
+        
+        <td >{{i + 1}}</td>
+        <td>
+            <img class = "small-flag" src="{{region.flags.png}}">
+        </td>
+        <td>{{region.region}}</td>
+        <td>{{region.name}}</td>
+        <td>{{region.population | number}}</td>
+        <td>
+            <a [routerLink] = "['/pais', region.alpha3Code]">Ver...</a>
+        </td>
+    </tr>
+</tbody>
+</table>
